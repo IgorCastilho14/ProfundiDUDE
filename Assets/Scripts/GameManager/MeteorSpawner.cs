@@ -17,7 +17,7 @@ public class MeteorSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(SpawnMeteor), 1f, meteorSpawnRate);
+        InvokeRepeating(nameof(SpawnMeteor), 2f, meteorSpawnRate);
     }
 
     private void SpawnMeteor()
@@ -49,5 +49,10 @@ public class MeteorSpawner : MonoBehaviour
     public void OnMeteorDestroyed()
     {
         currentMeteorCount--;
+    }
+
+    public void StopSpawn()
+    {
+        CancelInvoke();
     }
 }

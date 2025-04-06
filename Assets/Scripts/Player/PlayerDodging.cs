@@ -73,5 +73,14 @@ public class PlayerDodging : MonoBehaviour
     public void OnMeteorHit()
     {
         scoreManager.OnPlayerHit();
+
+        animator.SetBool("DamageTaken", true);
+
+        Invoke(nameof(ToggleDamageFalse), 0.2f);
+    }
+
+    private void ToggleDamageFalse()
+    {
+        animator.SetBool("DamageTaken", false);
     }
 }

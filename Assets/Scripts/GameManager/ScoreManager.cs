@@ -9,23 +9,22 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int enemyHit;
     [SerializeField] private int playerHit;
     public static int totalScore = 0;
-    public int currentScore = 0;
 
     [Header("Text")]
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private void Start()
     {
-        scoreText.text = currentScore.ToString();
+        scoreText.text = totalScore.ToString();
     }
 
     private void UpdateScore(int score)
     {
-        currentScore += score;
+        totalScore += score;
 
-        currentScore = Mathf.Clamp(currentScore, 0, int.MaxValue);
+        totalScore = Mathf.Clamp(totalScore, 0, int.MaxValue);
 
-        scoreText.text = currentScore.ToString();
+        scoreText.text = totalScore.ToString();
     }
 
     public void OnEnemyHit()

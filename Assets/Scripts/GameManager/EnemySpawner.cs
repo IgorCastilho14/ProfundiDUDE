@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(SpawnEnemy), 1f, enemySpawnRate);
+        InvokeRepeating(nameof(SpawnEnemy), 2f, enemySpawnRate);
     }
 
     private void SpawnEnemy()

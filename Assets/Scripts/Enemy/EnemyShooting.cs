@@ -26,13 +26,8 @@ public class EnemyShooting : MonoBehaviour
         moveDirection = Vector3.right;
 
         InvokeRepeating(nameof(Fire), 1f, fireCooldown);
-        animator = GetComponent<Animator>(); // Iniciando o Animator
 
-        // Verificação para garantir que o Animator foi encontrado
-        if (animator == null)
-        {
-            Debug.LogError("Animator component not found on " + gameObject.name);
-        }
+        animator = GetComponent<Animator>();
 
         // Define a direção inicial da animação
         UpdateDirectionAnimation();

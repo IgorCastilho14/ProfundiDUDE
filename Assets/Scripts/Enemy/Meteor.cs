@@ -54,4 +54,15 @@ public class Meteor : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            var player = other.gameObject.GetComponent<PlayerDodging>();
+
+            player.OnMeteorHit();
+        }
+        
+    }
 }

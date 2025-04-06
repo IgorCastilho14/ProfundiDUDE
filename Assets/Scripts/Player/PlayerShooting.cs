@@ -16,15 +16,17 @@ public class PlayerShooting : MonoBehaviour
     private float rechargeTime = 0f;
     
     private ScoreManager scoreManager;
-    private bool isActive = false;
+    private bool isActive = false;// Declaração do Animator como um campo privado da classe
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         scoreManager = FindAnyObjectByType<ScoreManager>();
-
+        
         isActive = true;
+        animator = GetComponent<Animator>(); //iniciando o animator
     }
 
     // Update is called once per frame
@@ -39,6 +41,23 @@ public class PlayerShooting : MonoBehaviour
         {
             Fire();
         }
+        
+        // Controle de direção para animação
+        if (playerInput.x < 0)
+        {
+            animator.SetInteger("Direcao", -1);
+        }
+        else if (playerInput.x > 0)
+        {
+            animator.SetInteger("Direcao", 1);
+        }
+        else
+        {
+            animator.SetInteger("Direcao", 0);
+        }
+
+        // Controle de propulsão (Player está subindo?)
+        animator.SetBool("EstaPropulsando", playerInput.y > 0);
     }
 
     private void FixedUpdate()

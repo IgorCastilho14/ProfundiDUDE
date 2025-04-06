@@ -9,12 +9,19 @@ public class PlayerDodging : MonoBehaviour
     private Vector3 playerInput;
     private Rigidbody body;
 
+    private Animator animator;
+    private ScoreManager scoreManager;
+
     private bool isActive = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        scoreManager = FindAnyObjectByType<ScoreManager>();
+
+        animator = GetComponent<Animator>();
+
         body = GetComponent<Rigidbody>();
     
         isActive = true;
@@ -24,7 +31,36 @@ public class PlayerDodging : MonoBehaviour
     void Update()
     {
         if (!isActive) return;
+
         playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f);
+
+        if(playerInput.x < 0f)
+        {
+            animator.SetInteger("X Axis", -1);
+        }
+        else if(playerInput.x > 0f)
+        {
+            animator.SetInteger("X Axis", +1);
+        }
+        else
+        {
+            animator.SetInteger("X Axis", 0);
+        }
+
+        ////////////////////////////////////////////
+       
+        if (playerInput.y < 0f)
+        {
+            animator.SetInteger("Y Axis", -1);
+        }
+        else if (playerInput.y > 0f)
+        {
+            animator.SetInteger("Y Axis", +1);
+        }
+        else
+        {
+            animator.SetInteger("Y Axis", 0);
+        }
     }
 
     private void FixedUpdate()
@@ -36,6 +72,6 @@ public class PlayerDodging : MonoBehaviour
 
     public void OnMeteorHit()
     {
-        
+        scoreManager.OnPlayerHit();
     }
 }

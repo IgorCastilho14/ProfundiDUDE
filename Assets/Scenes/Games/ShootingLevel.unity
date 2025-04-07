@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 946777388}
   - component: {fileID: 946777387}
   m_Layer: 5
-  m_Name: CurrentTimeText (1)
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

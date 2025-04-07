@@ -11,10 +11,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject blackHole;
     [SerializeField] private float blackHoleDistance;
     private MeteorSpawner meteorSpawner;
+    private StarSpawner starSpawner;
     private float remainingTime;
 
     private PlayerDodging player;
-
+    public static bool HasFinishedGame = false;
 
     [Header("Text")]
     [SerializeField] private TextMeshProUGUI timeText;
@@ -25,6 +26,8 @@ public class LevelManager : MonoBehaviour
         remainingTime = totalTime;
 
         meteorSpawner = FindAnyObjectByType<MeteorSpawner>();
+
+        starSpawner = FindAnyObjectByType<StarSpawner>();
 
         player = FindAnyObjectByType<PlayerDodging>();
 
@@ -50,6 +53,7 @@ public class LevelManager : MonoBehaviour
             if(SceneManager.GetActiveScene().name == "DodgingLevel")
             {
                 meteorSpawner.StopSpawn();
+                starSpawner.StopSpawn();
 
                 Vector3 spawnLocation = new Vector3(
                     player.transform.position.x,

@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d84d7f4754c3143a8bd4d0881503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.126
+  speed: 0.314
 --- !u!64 &37210590
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c46535792ffc17a438accafea0458196, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 890387761c6f1ed40b0d192954ea63af, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -766,6 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763729919}
   - component: {fileID: 763729918}
+  - component: {fileID: 763729920}
   m_Layer: 0
   m_Name: Nave
   m_TagString: Untagged
@@ -840,6 +841,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763729920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763729917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5398a459402a84949a5cd8ea8eeba63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.3
+  speed: 1
 --- !u!1 &1412176205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d84d7f4754c3143a8bd4d0881503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.472
+  speed: 0.066
 --- !u!1 &1711930772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,7 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d84d7f4754c3143a8bd4d0881503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.051
+  speed: 0.385
 --- !u!64 &1832307245
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1658,7 +1673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d84d7f4754c3143a8bd4d0881503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.265
+  speed: 0.208
 --- !u!64 &1880986844
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1778,7 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d84d7f4754c3143a8bd4d0881503cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.379
+  speed: 0.115
 --- !u!64 &1962599083
 MeshCollider:
   m_ObjectHideFlags: 0

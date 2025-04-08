@@ -307,7 +307,9 @@ MonoBehaviour:
   totalTime: 83
   blackHole: {fileID: 7680951930120160664, guid: 0fad58b114a07b241a5a67ebd793eabe, type: 3}
   blackHoleDistance: 1600
+  tutorialTime: 20
   timeText: {fileID: 498016373}
+  tutorialText: {fileID: 125461638}
 --- !u!114 &231274581
 MonoBehaviour:
   m_ObjectHideFlags: 0

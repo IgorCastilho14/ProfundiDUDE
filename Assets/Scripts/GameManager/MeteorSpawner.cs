@@ -14,6 +14,8 @@ public class MeteorSpawner : MonoBehaviour
     [SerializeField] private GameObject leftUpLimit;
     [SerializeField] private GameObject rightDownLimit;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {

@@ -2949,7 +2949,9 @@ MonoBehaviour:
   totalTime: 98
   blackHole: {fileID: 0}
   blackHoleDistance: 0
+  tutorialTime: 20
   timeText: {fileID: 1414023961}
+  tutorialText: {fileID: 0}
 --- !u!1 &1835962473
 GameObject:
   m_ObjectHideFlags: 0

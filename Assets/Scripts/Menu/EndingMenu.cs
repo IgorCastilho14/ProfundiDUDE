@@ -7,11 +7,19 @@ public class EndingMenu : MonoBehaviour
 {
     public void AcceptFate()
     {
-        SceneManager.LoadScene(0);
+        LevelManager.HasFinishedGame = true;
+
+        ScoreManager.totalScore = 0;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void GiveUp()
     {
-        Application.Quit();
+        LevelManager.HasFinishedGame = true;
+
+        ScoreManager.totalScore = 0;
+
+        SceneManager.LoadScene(0);
     }
 }

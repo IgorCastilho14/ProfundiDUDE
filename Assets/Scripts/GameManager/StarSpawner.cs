@@ -50,4 +50,9 @@ public class StarSpawner : MonoBehaviour
 
         Instantiate(starPrefab, spawnLocation, Quaternion.identity);
     }
+
+    public void StopSpawn()
+    {
+        CancelInvoke();
+    }
 }
